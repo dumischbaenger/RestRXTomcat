@@ -5,19 +5,6 @@
   id="WebApp_ID" version="3.0">
 
   <display-name>RestRXTomcat</display-name>
-  <!-- 
-  <servlet>
-    <servlet-name>org.apache.cxf.transport.servlet.CXFServlet</servlet-name>
-    <load-on-startup>1</load-on-startup>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>org.apache.cxf.jaxrs.servlet.CXFNonSpringJaxrsServlet</servlet-name>
-    <url-pattern>/resttest/*</url-pattern>
-  </servlet-mapping>
-  -->
-  
-  <!-- org.apache.cxf.jaxrs.servlet.CXFNonSpringJaxrsServlet -->
-  <!-- org.apache.cxf.transport.servlet.CXFServlet -->
 
   <security-constraint>
     <web-resource-collection>
