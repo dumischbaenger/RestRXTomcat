@@ -4,24 +4,28 @@
   xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
   id="WebApp_ID" version="3.0">
 
+  <!-- 
+    Packaging is described here: 
+    https://docs.oracle.com/cd/E24329_01/web.1211/e24983/configure.htm#RESTF187
+  -->
+
   <display-name>RestRXTomcat</display-name>
   <servlet>
     <servlet-name>de.dumischbaenger.RestRXTomcatApplication</servlet-name>
 
-  <init-param>
-   <param-name>javax.ws.rs.Application</param-name>
-   <param-value>de.dumischbaenger.RestRXTomcatApplication</param-value>
-</init-param>
+    <init-param>
+      <param-name>javax.ws.rs.Application</param-name>
+      <param-value>de.dumischbaenger.RestRXTomcatApplication</param-value>
+    </init-param>
     <load-on-startup>1</load-on-startup>
   </servlet>
-  
-  <!-- 
+
   <servlet-mapping>
-    <servlet-name>org.apache.cxf.jaxrs.servlet.CXFNonSpringJaxrsServlet</servlet-name>
-    <url-pattern>/resttest/*</url-pattern>
+    <servlet-name>de.dumischbaenger.RestRXTomcatApplication</servlet-name>
+    <url-pattern>/webxml/*</url-pattern>
   </servlet-mapping>
-  -->
-  
+
+
   <!-- org.apache.cxf.jaxrs.servlet.CXFNonSpringJaxrsServlet -->
   <!-- org.apache.cxf.transport.servlet.CXFServlet -->
 
