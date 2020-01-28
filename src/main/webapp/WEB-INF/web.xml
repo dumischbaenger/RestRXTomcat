@@ -5,11 +5,17 @@
   id="WebApp_ID" version="3.0">
 
   <display-name>RestRXTomcat</display-name>
-  <!-- 
   <servlet>
-    <servlet-name>org.apache.cxf.transport.servlet.CXFServlet</servlet-name>
+    <servlet-name>de.dumischbaenger.RestRXTomcatApplication</servlet-name>
+
+  <init-param>
+   <param-name>javax.ws.rs.Application</param-name>
+   <param-value>de.dumischbaenger.RestRXTomcatApplication</param-value>
+</init-param>
     <load-on-startup>1</load-on-startup>
   </servlet>
+  
+  <!-- 
   <servlet-mapping>
     <servlet-name>org.apache.cxf.jaxrs.servlet.CXFNonSpringJaxrsServlet</servlet-name>
     <url-pattern>/resttest/*</url-pattern>
