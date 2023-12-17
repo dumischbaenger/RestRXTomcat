@@ -36,10 +36,10 @@
       <role-name>testuser</role-name>
     </auth-constraint>
     <user-data-constraint>
-      <!-- <description>SSL not required</description> -->
-      <!-- <transport-guarantee>NONE</transport-guarantee> -->
-      <description>SSL required</description>
-      <transport-guarantee>CONFIDENTIAL</transport-guarantee>
+      <description>SSL not required</description>
+      <transport-guarantee>NONE</transport-guarantee>
+<!--       <description>SSL required</description> -->
+<!--       <transport-guarantee>CONFIDENTIAL</transport-guarantee> -->
     </user-data-constraint>
   </security-constraint>
   <security-role>
@@ -47,6 +47,6 @@
   </security-role>
   <login-config>
     <auth-method>BASIC</auth-method>
-    <realm-name>RestRealm</realm-name>
+    <realm-name>RestRXTomcat</realm-name>
   </login-config>
 </web-app>
