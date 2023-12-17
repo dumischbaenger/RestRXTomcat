@@ -28,26 +28,23 @@ dependencies {
 
 }
 
-def tomEEDir="/opt/tomee"
+def glassfischDir="/home/bdonauba/Arbeit/glassfish7"
+def autodeployDir="$glassfischDir/glassfish/domains/domain1/autodeploy"
 
-task jr (type: Exec) {
+task testDeploy (type: Exec) {
   group "BET"
-  description "build project and start jetty"
+  description "build project and deploy"
   dependsOn war
   
-  //BD strange behavior of jetty: if jandex... is in the jar file jetty throws an exception
   def script="""
     #sleep 2 
     #pkill -f tomcat-juli.jar
-    rm -rf $tomEEDir/webapps/${project.name}.war 
-    cp "${project.buildDir}/libs/${project.name}.war" "${tomEEDir}/webapps/${project.name}.war"
-    cd "$tomEEDir"
-    #zip -d webapps/JavaADJSFSample.war WEB-INF/lib/jandex-2.0.5.Final.jar
-    #./start.sh 
+    #rm -rf $autodeployDir/${project.name}.war 
+    cp "${project.buildDir}/libs/${project.name}.war" "${autodeployDir}"
 """
   println(script)
   
   executable "bash"
-  workingDir=new File(tomEEDir)
+  workingDir=new File(glassfischDir)
   args "-x", "-c", script
 }
