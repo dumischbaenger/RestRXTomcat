@@ -30,8 +30,4 @@ public class ModelService implements Serializable {
 
     return list;
   }
-  
-  
-
-  
- }
+}
