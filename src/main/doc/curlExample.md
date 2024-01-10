@@ -26,6 +26,8 @@ https://blog.payara.fish/client-certificate-realm-configuration-in-payara-server
 * create key pair along with CA certificate
 * use CA key pair to sign a second key pair with its certificate data (server certificate)
 
+A sample keystore keyStoreExample.jks is in this directory. Password is "changeit".
+
 ### configure Keystore 
 
 Under Configurations/server-config/http-listener-2 in the GUI or .../glassfish/domains/domain1/config/domain.xml directly in the configuration file.
